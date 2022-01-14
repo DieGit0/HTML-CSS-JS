@@ -1,0 +1,114 @@
+<html>
+<head>
+
+</head>
+<body onload="do_game()">
+<script>
+lstcolors = ["Aqua", "Cyan", "Orange", "Yellow", "Red", "Green","Grey", "Blue", "Maroon", "Purple"];
+colors    = [];
+colorIdxs = [];
+target    = 0;
+j         = 5;
+count     = 0;
+finished  = false;
+
+function selectedColors(lstcolors){
+    for(i = 0 ; i <= j; i++ ){
+//	    alert("func 1. valor de i: " + i);
+		target_index = Math.floor( Math.random() * (lstcolors.length -1));
+//		alert("func 1. target_index: " + target_index);
+//		alert("func 1. lstcolors[target_index]: " + lstcolors[target_index]);
+		if (noRepeatColor(target_index)){
+            colors.push(lstcolors[target_index]); // insere no final  
+			}
+		else
+		 i = i-1;
+	}
+	return colors;
+}
+function noRepeatColor(target_index){
+//alert("Dentro da funcao 2");
+	colorIdxs.unshift(target_index); // coloco na primeira posição
+//	alert("colorIdxs:" + colorIdxs);
+//	alert("target_index: " + target_index);
+//	alert("colorIdxs.length: " + colorIdxs.length);
+//	alert("lstcolors + cor: " + lstcolors[target_index]);
+	chkColor = true;
+	len = colorIdxs.length;
+//	alert("func 2. valor de i: " + i);
+	for(i = 1; i < len; i++ ){
+	    if(colorIdxs[i] == target_index){
+//		   alert("colorIdxs.shift(): " + colorIdxs.shift()); // retira da primeira posição
+		   chkColor = false;		  
+		}
+	}
+	return chkColor;
+}
+
+function check_guess(guess_imput){
+countcor = 0;
+for(var index in colors){
+
+//alert("index: " + index);
+   if(guess_imput != colors[index]){
+      countcor++;
+//	  alert("countcor e colors.length -> " + countcor +"  "+ colors.length);
+	  }
+}
+   if(countcor != colors.length ){
+      if( guess_imput == target){
+	     msg = "You Guessed\nYou used " + count + " temptatives"; 
+		 finished = true;}   
+      else 
+      if( target > guess_imput ){
+	     msg = "O alvo é maior";
+		 count++;}
+      else
+	  if
+        ( target < guess_imput ){	  
+         msg = "O alvo é menor";
+		 count++;}
+   }else
+     	 msg = "A cor não pertence as cores possiveis";
+		 	 
+return msg;
+}
+
+function do_game(){
+
+myBody=document.getElementsByTagName("body")[0];
+myBody.style.background= "white";
+
+  selectedColors(lstcolors);
+  target  = colors[ Math.floor( Math.random() * (colors.length -1))];
+ /* alert(finished);
+  alert(lstcolors.length);
+
+  alert("Target-> " + target );
+  alert("Cores -> " + colors ); */
+do{
+alert(colors);
+    guess_imput = prompt("JAVA SCRIPT\n\n"      +
+	"I am thinking of one of these colors:\n\n" +
+	 colors.sort()                              + 
+	"\n\nWhat color am I think of?\n");
+	
+	alert(check_guess(guess_imput));
+	
+//	alert(guess_imput);	
+//	alert(finished);
+	
+}while( !finished );
+
+//	  alert("Target : " + target );  
+//	  alert("vetor colors: " + colors );
+	  
+myBody=document.getElementsByTagName("body")[0];
+myBody.style.background= target;
+
+}
+</script>
+<h1> Congratulations! </h1>
+<h2> </h2>
+</body>
+</html>

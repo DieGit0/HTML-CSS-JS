@@ -1,0 +1,87 @@
+<html>
+<head>
+<fieldset class="fldsetStandard">
+	<h1>Sign Up</h1>
+    <meta> </meta>
+    <style>
+	 fieldset{background:lightyellow; border:10px solid yellow; margin-bottom:10px; width:720px}
+	 textarea {width:360px;height:50px}
+	 .fldsetStandard{background:white; border:1px solid gray; margin-bottom:10px; width:760px}
+	 .lbl{display:inline-block; width:180px; text-align:right; vertical-align:top}
+	 .lblcbxrdo{width:auto}
+	 .lblrngl{display:inline-block; width:50px; color:white; background:maroon; text-align:center; vertical-align:top}
+	 .lblrngr{display:inline-block; width:50px; color:white; background:purple; text-align:center; vertical-align:top}
+      label:hover{font-size:30px}
+    </style>	
+</head>
+<body>
+
+<form method=get action="http://ihome.ust.hk/~rossiter/cgi-bin/show_everything.php#" enctype="multpart/form-data">
+<!--
+<fieldset>
+ <legend>Your Face</legend>
+   <label class="lbl" for="avatar">Your image:</label>
+     <input type="file" id="avatar" name="imageUpload" required><br>
+   <label class="lbl"             > Image previl:</label>
+     <image id="preview"><br>
+ </legend>
+</fieldset>
+
+<fieldset class="fldset">
+ <legend>Your General Details</legend>
+   <label class="lbl"> Name:</label>
+     <input type="text" name="name" placeholder="Your full name" required><br>
+   <label class="lbl"> Gender:</label>
+     <input type="radio" class="lblcbxrdo" id="generoM" name="genderM" required><label for="generoM">Super Macho Man</label>
+     <input type="radio" class="lblcbxrdo" id="generoF" name="genderF" required><label for="generoF">Feminazzi</label><br/>
+   <label class="lbl"> Age:</label>
+     <input type="number" id="age" name="age" min=0 max=100 step=1 required><label for="age"></label><br>
+   <label class="lbl"> Date of Birth:</label>
+     <input type="date" id="date" required><label for="age"></label><br>
+   <label class="lbl"> Favorite color:</label>
+     <input type="color" id="color" required><label for="age"></label><br>
+   <label class="lbl"> Wich country:</label>
+     <select name="countries">
+	   <option name="Afg">Afeganistao</option>
+	   <option name="Bra">Brazil</option>
+	   <option name="Cro">Croacia</option>
+	   <option name="Rus">Macedonia</option>
+	   <option name="Tur">Turquia</option>
+	   <option name="Zim">Zimbabue</option>
+	 </select> 
+</fieldset>
+
+<fieldset class="fldset">
+ <legend>Your Indicator</legend>
+  <label class="lbl">Hight:</label>
+    <label class="lblrngl">Short</label>
+	 <input type="range" min="0" max="100" id="hight" name="hight"  ><label for="hight"></label>
+	<label class="lblrngr">Tall</label><br>
+  <label class="lbl">Salary:</label>
+    <label class="lblrngl">Poor</label>
+	 <input type="range" class="lblrng" min="0" max="100" id="salary" name="salary"><label for="salary"></label>
+	<label class="lblrngr">Rich</label><br>
+</fieldset>
+-->
+<fieldset class="fldset">
+ <legend>Your ontact Information</legend>
+  <label class="lbl"> Username:</label>
+    <input type="text"  id="email" name="username"  placeholder="Your id (username)" required><br>
+  <label class="lbl">Email:</label>
+	<input type="email" id="email" name="email"     placeholder="An email adress"    required><label for="email"></label><br>
+<!--  <label class="lbl">Mobile:</label>
+	<input type="tel" id="moblie" name="mobile"><label for="mobile"></label><br>
+  <label class="lbl">Adress:</label>
+	<textarea class="txtarea" name="coment"></textarea><br>
+  <label>Method to contact you:</label>
+  <input type="checkbox" class="lblcbxrdo" id="email"  name="email"><label>Email</label>
+  <input type="checkbox" class="lblcbxrdo" id="mobile" name="mobile"><label>WhatsApp</label>
+  <input type="checkbox" class="lblcbxrdo" id="app"    name="app"><label>In-app chat</label><br> -->
+</fieldset>
+
+ <input type="submit" id="submit" name="btnsbmt"><label for="submit"></label><br>
+</form>
+</fieldset>
+<script src="imgShow.js"></script>
+</body>
+</html>

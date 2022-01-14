@@ -1,0 +1,61 @@
+
+<style>
+ label.alinhar{display:inline-block; width:85px}
+ label.alinhar2{display:inline-block; width:137px}
+ alinhar3{display:inline-block; width:400px}
+.centro{background:orange; color:black; display:inline-block; width:400px; align:center}
+
+</style>
+
+<form action="pag.html" method="get" enctype="multpart/form-data">
+<!-- label for=[id da label] para dar o foco qndo clicar na label -->
+<label for="name"  class="alinhar">Nome:</label>
+<input type="Text" id="name" name="name" value="ex:Diego" autofocus required><br>
+<label for="sbname"class="alinhar">Sobre Nome:</label> 
+<input type="Text" id="sbname" name="sbname"><br>
+<!-- Criando Drop Box -->
+  <select name="cities">
+     <option value="hkg">Hon kong </option>
+	 <option value="Ams">Amsterdan</option>
+	 <option value="Egp">Egypt    </option>
+  </select><p>
+
+  <fieldset><!-- Criando Agrupamento de elementos -->
+      <legend color="Blue">Genero</legend><!-- Dando uma legenda para o agrupamento -->
+	 <!-- Criando Radio -->
+     <input type="radio" id="generoM" name="genero" value="smm"/><label for="generoM">Super Matcho Man</label><br/>
+     <input type="radio" id="generoF" name="genero" value="fmz"/><label for="generoF">Feminazzi       </label><br/>       
+  </fieldset><p>
+  
+  <!-- Criando Checkbox -->
+ <input type="checkbox" id="bonita"   name="bonita"   /><label for="bonita"  >E Bonita?    <br/>
+ <input type="checkbox" id="solteira" name="solteira" /><label for="solteira">E Solteira?  <br/>
+ <input type="checkbox" id="filho"    name="filho"    /><label for="filho"   >Tem Filho(s)? <p/>
+ 
+<label for="pass">Password:</label>
+<input type="password" name="pass" placeholder="Digite sua Senha aqui" required><br>
+	 <input type="file" name="fileUpload" required><br>
+	 <input type="submit" name="sub" value="Enviar"><br>
+ 
+<fieldset class="centro">
+        <legend ><label style=color:green>Other Things</label></legend>
+	<div class="alinhar2">	
+		<label class="alinhar2" for="idade">Sua idade:</label>   
+		 <input type="number" min="0" max="120" step="2" value="18" id="idade" name="idade"><br/>	
+        <label class="alinhar2">Data de Nascimento:</label>  
+		 <input type="date" name="date"><br/>		 
+	    <label class="alinhar2" >Hora que acorda:</label>     
+		 <input type="time" name="time"><br/>
+	    <label >Cor da calcinha hoje:</label>
+		 <input type="color"  name="color"><br/>
+	    <label >Seu humor today:</label>  
+		 Bad<input type="range"  name="range">I feel Good<br/>
+	</div>
+</fieldset>
+
+<fieldset>This is information</fieldset>
+<div style="border:1px solid">This is information</div>
+<p style="border:2px solid">This is information</p> 
+
+	
+</form>
