@@ -1,2 +1,2 @@
 # HTML-CSS-JS
-Some webpage examples to test some learned skills
+Some sample web pages to test some learned skills
